@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Pagina Principal</title>
+    <style>
+    body{
+    background: black;
+}
+#grande{
+    margin-top: 30px ; 
+    margin-left: 100px;
+    width: 800px;
+    height: auto;
+    padding-bottom: 5px;
+    background:rgba(227, 233, 227, 0.6);
+    border-radius: 15px
+}
+    </style>
+
+</head>
+
+<body style="padding-bottom: 20px; background: black">
+    <div
+        style="margin-top: 30px ; margin-left: 100px;width: 600px;height: auto;padding-bottom: 5px;background:rgba(235, 243, 235, 0.6);border-radius: 15px">
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 30px">Tiket Nº:</h5>
+            </div>
+            <div class="col-6">
+                <input class="form-control" type="number" style="margin-left: -20px;text-align: center" id="tiket">
+            </div>
+        </div> 
+        <hr style="margin-top: -5px;background-color: white">
+        <div class="row">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 30px">Mesas:</h5>
+            </div>
+            <div class="col-6">
+                <select class="form-control" id="mesa" style="margin-left: -20px;text-align: center">
+                    <option value="Mesas01">Mesas01</option>
+                    <option value="Mesas02">Mesas02</option>
+                    <option value="Mesas03">Mesas03</option>        
+                    <option value="Mesas04">Mesas04</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 10px">Cliente:</h5>
+            </div>
+            <div class="col-2">
+                <input class="form-control" type="text" style="margin-left: -18px;text-align: center" id="cliente">
+            </div>
+            <div class="col-2">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: -35px">DNI:</h5>
+            </div>
+            <div class="col-2">
+                <input class="form-control" type="text" style="margin-left: -40px;text-align: center" id="dni">
+            </div> 
+        </div> 
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 30px">Plato:</h5>
+            </div>
+            <div class="col-6">
+                <select class="form-control" id="producto" style="margin-left: -20px;text-align: center">
+                    <option value="Seco">Seco</option>
+                    <option value="Cabrito">Cabrito</option>
+                    <option value="Tallarin">Tallarin</option>        
+                    <option value="Lomo Saltado">Lomo Saltado</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 30px">Precio:</h5>
+            </div>
+            <div class="col-6">
+                <input class="form-control" type="number" style="margin-left: -20px;text-align: center" id="precio">
+            </div> 
+        </div> 
+
+        <div class="row" style="margin-top: 10px">
+            <div class="col-6">
+                <h5 style="text-align: center;margin-top: 5px;margin-left: 30px">Cantidad:</h5>
+            </div>
+            <div class="col-6">
+                <input class="form-control" type="number" style="margin-left: -20px;text-align: center" id="cantidad">
+            </div> 
+        </div> 
+
+
+
+        <button onclick="obtenervalores()" class="btn btn-primary"
+            style="text-align: center;margin-top: 10px;margin-left: 300px">Registrar</button>
+               
+
+        <table id="contenido_tabla"  
+            style="border-radius: 20px;margin-top: 20px;margin-left: 5px;width:590px;text-align: center;background-color: white"
+            class="table table-bordered">
+            <thead>
+                <tr>
+
+                    <th scope="col">Tiket Nº</th>
+                    <th scope="col">Mesa</th>
+                    <th scope="col">cliente</th>
+                    <th scope="col">dni</th>
+                    <th span="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <hr>
+
+        <table id="contenido_tabla"  
+            style="border-radius: 20px;margin-top: 20px;margin-left: 5px;width:590px;text-align: center;background-color: white"
+            class="table table-bordered">
+            <thead>
+                <tr>
+
+                    <th scope="col">Plato</th>
+                    <th scope="col">cantidad</th>
+                    <th scope="col">precio</th>
+                    <th scope="col">dniimporte</th>
+                    <th span="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-4">
+             
+            </div>  
+            <div class="col-5">
+
+            </div>
+            <div class="col-3">
+                <h5 style="margin-left: -10px">Total:</h5>
+                <input type="text" id="totalindex" class="form-control" style="width:80px;text-align:center;margin-top: -38px;margin-left: 40px" disabled>
+                   
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="scripitventas.js"></script>    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

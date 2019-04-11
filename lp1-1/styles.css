@@ -1,0 +1,45 @@
+body{
+    background-image: url(recursos/car.jpg);
+    background-repeat: no-repeat;
+
+}
+#cuerpo{
+    width: 1000px;
+    height: 950px;
+    background: rgb(240, 236, 236);
+    margin-left: 400px;
+    margin-top: 50px;  
+    border-radius: 20px;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+    
+}
+#titulo{
+
+    font-size: 40px;
+    margin-left: 10px;
+    
+}
+#contenedor{
+    margin-top: 40px;
+    height: 35px;
+    width: 1000px;
+   
+}
+
+header nav{
+    text-align: center;
+    background-color:rgb(46, 85, 194) ;
+    
+
+
+}
+#kk{
+    width: 1000px;
+    height: 25px;
+}
+
